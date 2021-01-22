@@ -1,0 +1,7 @@
+<h1>Logs</h1>
+
+<pre id="logs" phx-update="append">
+  <%= for {line, index} <- @logs do %>
+    <span id="<%= index %>" phx-hook="LogUpdate"><%= line %></span>
+  <% end %>
+</pre>
